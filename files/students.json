@@ -1,0 +1,8 @@
+{
+  "data": [
+    {"Student Name":  "Alex", "Student Number":  2025, "Tuition Paid":  true},
+    {"Student Name":  "Kelly", "Student Number":  2029, "Tuition Paid":  true},
+    {"Student Name":  "John", "Student Number":  1010, "Tuition Paid":  true},
+    {"Student Name":  "Hannah", "Student Number":  9001, "Tuition Paid":  false}
+  ]
+}
