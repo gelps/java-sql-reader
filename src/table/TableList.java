@@ -1,5 +1,7 @@
 package table;
 
+import table.exceptions.TableNotFoundException;
+
 import java.util.HashMap;
 
 public class TableList {
@@ -9,6 +11,12 @@ public class TableList {
 
     private TableList() {
         tablesMap = new HashMap<>();
+    }
+
+    public Table getTable(String tableName) throws TableNotFoundException {
+        Table table = tablesMap.get(tableName);
+        if (table != null) return table;
+        else throw new TableNotFoundException();
     }
 
     public static TableList getTableList() {
