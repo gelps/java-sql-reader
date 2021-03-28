@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,7 +11,6 @@ import table.exceptions.RowException;
 import table.table_elements.TableRow;
 import table.table_elements.TableSchema;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 

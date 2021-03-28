@@ -1,5 +1,7 @@
 package table.table_elements;
 import program_util.Pair;
+import program_util.conditions.ConditionBlock;
+import program_util.conditions.InvalidConditionException;
 import table.exceptions.InvalidSchemaException;
 import table.exceptions.RowException;
 import table.exceptions.TableExceptionErrorsEnums;
@@ -41,12 +43,19 @@ public class TableRow {
         return new TableRow(rowElements, tableSchema);
     }
 
-    // TableRow promises rows are inserted with the right schema, but it's the tables job to check
-    // ensure all columns specified in columnsRequired exist in the schema!
-    public HashMap<String, String> getColumns(ArrayList<String> columnsRequested) {
-        HashMap<String, String> requestedColumns = new HashMap<>();
+    public boolean isRowConditionMet(ConditionBlock conditionBlock) throws InvalidConditionException {
+        return conditionBlock.blockMeetsConditions(this.rowElements, this.tableSchema);
+    }
+
+    // columnsRequested is the list of all columns to get
+    public ArrayList<String> getColumns(ArrayList<String> columnsRequested, ConditionBlock conditionBlock)
+            throws InvalidConditionException{
+        if (!conditionBlock.blockMeetsConditions(this.rowElements, this.tableSchema)) {
+            return null;
+        }
+        ArrayList<String> requestedColumns = new ArrayList<>();
         for (String columnRequested : columnsRequested) {
-            requestedColumns.put(columnRequested, rowElements.get(columnRequested));
+            requestedColumns.add(rowElements.get(columnRequested));
         }
         return requestedColumns;
     }

@@ -1,0 +1,13 @@
+"Northwest Manufacturing School"
+"studentid" "name" "program" "year"
+"int" "string" "string" "int"
+--
+--
+"10951" "Emily S" "Airplane Builder" "5"
+"500" "John G" "Car Fixer" "1"
+"22202" "New Student" "Machine Fixer Upper" "8"
+"1" "The President" "Helicopter Repair Shop Sales Specialist" "5"
+"102" "Emily A" "Helicopter Repair Shop Sales Specialist" "1"
+"103" "Mulan" "Helicopter Repair Shop Sales Specialist" "2"
+"104" "Chris Zedman" "Car Fixer" "1"
+"105" "Chris Newman" "Car Fixer" "2"

@@ -19,6 +19,10 @@ public class TableList {
         else throw new TableNotFoundException();
     }
 
+    public void addTable(Table table) {
+        this.tablesMap.put(table.getTableName(), table);
+    }
+
     public static TableList getTableList() {
         if (tableList == null) {
             tableList = new TableList();
