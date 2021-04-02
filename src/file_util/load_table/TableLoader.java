@@ -1,5 +1,6 @@
-package file_util;
+package file_util.load_table;
 
+import file_util.load_table.FileException;
 import program_util.DataConversionHelpers;
 import program_util.Pair;
 import table.Table;

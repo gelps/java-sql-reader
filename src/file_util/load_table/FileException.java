@@ -1,4 +1,4 @@
-package file_util;
+package file_util.load_table;
 
 public class FileException extends Exception {
 

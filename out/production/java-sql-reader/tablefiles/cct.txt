@@ -1,0 +1,12 @@
+"Canadian Cities"
+"city" "province" "population-2000" "population-2016" "airport"
+"string" "string" "int" "int" "string"
+--
+--
+"Vancouver" "BC" "2040000" "2463000" "YVR"
+"Calgary" "AB" "950000" "1393000" "YYC"
+"Edmonton" "AB" "949000" "1321000" "YEG"
+"Winnipeg" "MB" "692000" "778000" "YWG"
+"Toronto" "ON" "4765000" "5929000" "YYZ"
+"Ottawa" "ON" "1055000" "1323000" "YOW"
+"Montreal" "QC" "3500000" "4099000" "YUL"

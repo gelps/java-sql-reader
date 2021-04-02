@@ -34,6 +34,7 @@ public class Table {
         this.tableRows.add(TableRow.insert_row(row, this.tableSchema));
     }
 
+    // Returns a list of all the rows, with elements ordered in the order specified by requestedColumns
     public ArrayList<ArrayList<String>> getTableRows(ArrayList<String> requestedColumns,
                                                      ConditionBlock conditionBlock) throws InvalidConditionException {
         ArrayList<ArrayList<String>> rows = new ArrayList<>();
@@ -48,5 +49,9 @@ public class Table {
     public String getTableName() {
         return this.tableName;
     }
+
+    public ArrayList<String> getDefaultColumnOrder() { return this.tableSchema.getDefaultColumnOrder(); }
+
+    public TableSchema getTableSchema() { return this.tableSchema; }
 
 }
