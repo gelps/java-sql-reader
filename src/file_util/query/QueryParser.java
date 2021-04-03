@@ -112,8 +112,9 @@ public class QueryParser {
         } else {
             Set<String> inSet = new HashSet<>();
             int thisItemPosition = valueToCompareIndex;
-            int nextItemPosition = s.indexOf(",");
+            int nextItemPosition = -1;
             do {
+                nextItemPosition = s.indexOf(",", nextItemPosition + 1);
                 if (nextItemPosition == -1) {
                     inSet.add(s.substring(thisItemPosition + 1, s.length() - 1));
                 } else {
@@ -122,7 +123,6 @@ public class QueryParser {
                     }
                     inSet.add(s.substring(thisItemPosition + 1, nextItemPosition));
                     thisItemPosition = nextItemPosition;
-                    nextItemPosition = s.indexOf(",", nextItemPosition + 1);
                 }
             } while (nextItemPosition != -1);
             return new SingleCondition(s.substring(columnNameIndex + 1, valueToCompareIndex), condition, inSet);

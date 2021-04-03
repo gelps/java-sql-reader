@@ -33,6 +33,8 @@ public class QueryParserTest {
             assertEquals(2, result.size());
             assertEquals("city = \"Toronto\"", result.get(0));
             assertEquals("city = \"Ottawa\"", result.get(1));
+            ArrayList<String> result2 = QueryParser.parseQuery("SELECT * FROM Canadian Cities WHERE (IN city Vancouver,Toronto,Calgary)");
+            assertEquals(3, result2.size());
         } catch (QueryException | TableNotFoundException | InvalidConditionException e) {
             fail("fail parse Cct - caught error unexpected");
         }
