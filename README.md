@@ -8,7 +8,7 @@ This program allows a user to load a table and query the table using limited SQL
 A table can be loaded using the UI by placing the file inside the 'tablefiles' folder and specifying the name of the file.
 
 ### Example - Load the 'Canadian Cities' Table
-![Loading Table](https://drive.google.com/uc?id=1Fm3ZkNCXPTPbtWr3PU0q2gprpn4oyj5B)
+![Loading Table GUI Image](https://drive.google.com/uc?id=1Fm3ZkNCXPTPbtWr3PU0q2gprpn4oyj5B)
 
 A table is specified in a text file and loaded by the TableLoader. Each table should be entered as a text file in the
 following format:
@@ -18,7 +18,7 @@ following format:
 - Lines 4 & 5 : leave empty
 - Line 6 onwards : individual rows
 
-Refer to the example tables in the folder 'tablefiles'
+Refer to the example tables in the folder ['tablefiles'](https://github.com/gelps/java-sql-reader/tree/main/src/tablefiles)
 
 ## Queries
 Each query must be entered as follows. Use exactly 1 space to separate between each element in the query except for lists
@@ -41,9 +41,9 @@ is evaluated.
 ### Example Query on the 'Canadian Cities' Table
     SELECT * FROM Canadian Cities WHERE (AND (IN province BC,AB,ON,QC) (OR (GEQ airport YV) (EQ airport YEG)))
 
-![Sample Query](https://drive.google.com/uc?id=1Ii0wlNwvmoNNQTPsvZUHMYjhp3lNOu2L)
+![Sample Query Results Image 1](https://drive.google.com/uc?id=1Ii0wlNwvmoNNQTPsvZUHMYjhp3lNOu2L)
 
 ### Example Query on the 'Northwest Manufacturing School' Table
     SELECT name FROM Northwest Manufacturing School WHERE (AND (EQ program Helicopter Repair Shop Sales Specialist) (LT year 3))
 
-![Sample Query](https://drive.google.com/uc?id=16cQ2nWKlMdouRdiuEYepNBl4eY-UtfVo)
+![Sample Query Results Image 2](https://drive.google.com/uc?id=16cQ2nWKlMdouRdiuEYepNBl4eY-UtfVo)
